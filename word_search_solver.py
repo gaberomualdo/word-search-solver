@@ -51,6 +51,61 @@ def solve_word_search(word_search, words):
 		else:
 			return False
 
+	# find words diagonally (left to right) within word search (function)
+	def findWordDiagontally(local_word_search, word):
+		# loop through possible indeces for start of word
+
+		# loop through possible rows
+		for row_index in range(len(local_word_search) - len(word)):
+			row = local_word_search[row_index]
+			
+			# then possible letters in each row
+			for item_index in range(len(row) - len(word)):
+				# word found variable
+				word_found = True
+
+				# then loop through each letter in word and check if the word does indeed start at current index possibility
+				for letter_index in range(len(word)):
+					# variable for current letter
+					letter = word[letter_index]
+
+					# variable for corresponding possible letter in word search that is to be checked
+					letter_to_check = word_search[row_index + letter_index][item_index + letter_index]
+
+					# check if letter_to_check variable is equal to letter; if not, set word_found variable to false, and end loop
+					if(letter != letter_to_check):
+						word_found = False
+						break
+				
+				# if word was not found, try reversed word
+				if(word_found != True):
+					# reset word_found variable
+					word_found = True
+
+					# try same thing with reversed word
+					reversed_word = word[::-1]
+					for letter_index in range(len(reversed_word)):
+						# variable for current letter
+						letter = reversed_word[letter_index]
+
+						# variable for corresponding possible letter in word search that is to be checked
+						letter_to_check = word_search[row_index + letter_index][item_index + letter_index]
+
+						# check if letter_to_check variable is equal to letter; if not, set word_found variable to false, and end loop
+						if(letter != letter_to_check):
+							word_found = False
+							break
+				
+				# if word was found, loop through each letter and capitalize
+				if(word_found == True):
+					# loop through each letter of word
+					for letter_index in range(len(word)):
+						# make letter uppercase
+						word_search[row_index + letter_index][item_index + letter_index] = word_search[row_index + letter_index][item_index + letter_index].upper()
+
+		# return word search
+		return local_word_search
+
 	# rotate array 90 degrees (function)
 	def rotateArray(local_array):
 		# this neat one liner rotates any 2D array clockwise
@@ -64,6 +119,11 @@ def solve_word_search(word_search, words):
 
 		# return rotated array
 		return local_array
+
+	# reverse array (function)
+	def reverseList(local_array):
+		# one-liner that reverses array
+		return local_array[::-1]
 
 	# list of words found
 	words_found = [False]*(len(words))
@@ -103,7 +163,7 @@ def solve_word_search(word_search, words):
 		word_search = convertToStringArray(word_search)
 
 		# replace word with all caps version in word search
-		
+
 		# variable for word search with word found
 		local_word_search_found_word = findWordHorizontally(word_search, word)
 
@@ -121,12 +181,22 @@ def solve_word_search(word_search, words):
 		# rotate word search back to original by rotating clockwise 3 times (same thing as rotating counter clockwise)
 		word_search = rotateArrayCounterClockwise(word_search)
 
-		# find diagonal occurences (this one is much more complex than the casual horizontal string replace)
+		# find diagonal occurences
 
+		# left to right diagonal
+		word_search = findWordDiagontally(word_search, word)
+
+		# right to left diagonal
+
+		# flip word search horizontally, then find word in word search
+		word_search = map(reverseList, word_search)
+		word_search = findWordDiagontally(word_search, word)
+
+		# flip back horizontally
+		word_search = map(reverseList, word_search)
 
 	# return solved word search
-	return convertToStringArray(word_search, " ")
+	return word_search
 
 # test solve word search function
-for row in solve_word_search(example_to_solve, ["jefferson", "washington", "clinton", "bush", "lincoln"]):
-	print row
+print solve_word_search(example_to_solve, ["jefferson", "washington", "clinton", "bush", "lincoln"])
