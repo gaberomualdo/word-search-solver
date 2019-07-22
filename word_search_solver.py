@@ -125,9 +125,6 @@ def solveWordSearch(word_search, words):
 		# one-liner that reverses array
 		return local_array[::-1]
 
-	# list of words found
-	words_found = [False]*(len(words))
-
 	# loop through each word and find
 	for wordlist_index in range(len(words)):
 		# variable for word

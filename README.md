@@ -39,3 +39,7 @@ Note that this will install the two files ```word_search_solver.py``` and ```wor
 ``` bash
 python word_search_solver_app.py
 ```
+
+## Bugs or Issues
+
+If you find a bug or have an issue with Word Search Solver, feel free to [Submit an Issue](https://github.com/xtrp/word_search_solver/issues/new).
