@@ -10,6 +10,8 @@ This repository also includes a Python command line implementation of the progra
 
 ## Download & Usage
 
+1. **Make sure you have Python installed.** Install Python at [python.org](https://www.python.org/downloads/). Most computers running macOS should have Python pre-installed. Check if you have Python installed by typing the command ```python``` and pressing enter in your command prompt or terminal. If a prompt like ```>>>``` shows up, then Python is installed.
+
 ### Download with Only ```solveWordSearch``` Function
 
 To download the program with the ```solveWordSearch``` function only, type the following command into your computer's terminal and hit enter:
