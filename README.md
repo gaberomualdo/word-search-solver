@@ -12,35 +12,19 @@ This repository also includes a Python command line implementation of the progra
 
 1. **Make sure you have Python installed.** Install Python at [python.org](https://www.python.org/downloads/). Most computers running macOS should have Python pre-installed. Check if you have Python installed by typing the command ```python``` and pressing enter in your command prompt or terminal. If a prompt like ```>>>``` shows up, then Python is installed.
 
-### Download with Only ```solveWordSearch``` Function
+2. type the following command into your computer's terminal and hit enter:
 
-To download the program with the ```solveWordSearch``` function only, type the following command into your computer's terminal and hit enter:
+    ``` bash
+    curl https://xtrp.github.io/word_search_solver/word_search_solver.py -o word_search_solver.py
+    ```
 
-``` bash
-curl https://xtrp.github.io/word_search_solver/word_search_solver.py -o word_search_solver.py
-```
+3. Then, to use this function in other Python programs, simply include this line at the top of your programs:
 
-Then, to use this function in other Python programs, simply include this line at the top of your programs:
+    ``` bash
+    execfile("path/to/word_search_solver.py")
+    ```
 
-``` bash
-execfile("path/to/word_search_solver.py")
-```
-
-Note that ```path/to/``` in this command should be replaced with the relative path to the ```word_search_solver.py``` file from your Python program.
-
-### Download with Example Implementation
-
-To download the program with the ```solveWordSearch``` function as well as the example implementation, type the following command in your computer's terminal and hit enter:
-
-``` bash
-curl https://xtrp.github.io/word_search_solver/word_search_solver.py -o word_search_solver.py && curl https://xtrp.github.io/word_search_solver/example_implementation.py -o example_implementation.py && python example_implementation.py
-```
-
-Note that this will install the two files ```word_search_solver.py``` and ```example_implementation.py``` in your current working directory. For future use, simple enter the directory that contains both these files, and run the following command:
-
-``` bash
-python example_implementation.py
-```
+    Note that ```path/to/``` in this command should be replaced with the relative path to the ```word_search_solver.py``` file from your Python program.
 
 ## Bugs or Issues
 
