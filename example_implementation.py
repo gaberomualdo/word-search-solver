@@ -1,3 +1,5 @@
+# NOTE: this program should not be used in production as it has not been tested thoroughly
+
 # import word_search_solver.py (function)
 execfile("word_search_solver.py")
 

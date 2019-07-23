@@ -28,18 +28,18 @@ execfile("path/to/word_search_solver.py")
 
 Note that ```path/to/``` in this command should be replaced with the relative path to the ```word_search_solver.py``` file from your Python program.
 
-### Download with Python Command Line Implementation
+### Download with Example Implementation
 
-To download the program with the ```solveWordSearch``` function as well as the Python command line implementation, type the following command in your computer's terminal and hit enter:
+To download the program with the ```solveWordSearch``` function as well as the example implementation, type the following command in your computer's terminal and hit enter:
 
 ``` bash
-curl https://xtrp.github.io/word_search_solver/word_search_solver.py -o word_search_solver.py && curl https://xtrp.github.io/word_search_solver/word_search_solver_app.py -o word_search_solver_app.py && python word_search_solver_app.py
+curl https://xtrp.github.io/word_search_solver/word_search_solver.py -o word_search_solver.py && curl https://xtrp.github.io/word_search_solver/example_implementation.py -o example_implementation.py && python example_implementation.py
 ```
 
-Note that this will install the two files ```word_search_solver.py``` and ```word_search_solver_app.py``` in your current working directory. For future use, simple enter the directory that contains both these files, and run the following command:
+Note that this will install the two files ```word_search_solver.py``` and ```example_implementation.py``` in your current working directory. For future use, simple enter the directory that contains both these files, and run the following command:
 
 ``` bash
-python word_search_solver_app.py
+python example_implementation.py
 ```
 
 ## Bugs or Issues
