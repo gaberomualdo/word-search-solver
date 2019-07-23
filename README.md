@@ -2,6 +2,8 @@
 
 A simple program to solve plaintext word searches. Written in Python2 by [Fred Adams](https://xtrp.io/). Licensed under the [MIT License](https://choosealicense.com/licenses/mit/).
 
+![Word Search Solver Graphic](graphic.jpg)
+
 ## Overview
 
 The program takes a 2D array of lowercase letters (the word search) and a list of words, and returns the same word search with the words in uppercase.
