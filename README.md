@@ -1,6 +1,6 @@
 # Word Search Solver
 
-A simple program to solve plaintext word searches. Written in Python2 by [Fred Adams](https://xtrp.io/). Licensed under the [MIT License](https://choosealicense.com/licenses/mit/).
+A simple program to solve plaintext word searches. Written in Python2 by [Gabriel Romualdo](https://xtrp.io/). Licensed under the [MIT License](https://choosealicense.com/licenses/mit/).
 
 ![Word Search Solver Graphic](graphic.jpg)
 
